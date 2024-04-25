@@ -1,5 +1,59 @@
-se realiza prueba de antonio git branch -agit st
+Primero se debe intalar git en las maquinas si no lo tienes
+usando powerShell
+winget install --id Git.Git -e --source winget
+validar version
+git --version
+una vez intalado debes configutar las variables de entorno
+Windows: Si estás en Windows, la ruta de instalación de Git se agrega automáticamente al PATH durante la instalación. Si no es así, puedes hacerlo manualmente siguiendo estos pasos:
+Abre el Panel de Control.
+Busca "Variables de entorno" en la barra de búsqueda y haz clic en "Editar las variables de entorno del sistema".
+En la sección "Variables de entorno", busca la variable llamada "Path" en la lista de "Variables del sistema" y haz doble clic en ella.
+Haz clic en "Nuevo" y agrega la ruta de instalación de Git (por lo general, C:\Program Files\Git\bin o C:\Program Files\Git\cmd).
+Haz clic en "Aceptar" en todas las ventanas para guardar los cambios.
 
-esta es una prueba desde mi pc 
+autentificarte
+configura tu nombre de usuario y dirección de correo electrónico utilizando los comandos git config --global:
+git config --global user.email "tucorreo@example.com"
+git config --global user.name "Tu Nombre"
 
-mas otra
+
+clanar carpeta
+git clone https://github.com/ticestadias/ambu_web.git
+
+visualizar ramas
+git branch
+visualizar ramas locales
+git branch -a
+selecionar y cambiar a tu rama asignada
+git checkout -b antoniov549 origin/antoniov549
+
+Cambiar a la nueva rama: Utiliza el comando git checkout seguido del nombre de la rama a la que deseas cambiar.
+git checkout nombre-de-la-rama
+
+Verificar el cambio de rama: Puedes usar el comando git branch nuevamente para verificar que hayas cambiado correctamente a la nueva rama. La rama actual ahora estará resaltada con un asterisco (*).
+git branch
+
+Agregar archivos al área de preparación (staging): Si has realizado cambios en archivos y deseas incluirlos en el próximo commit, primero debes agregarlos al área de preparación utilizando el comando git add. Puedes agregar archivos específicos o todos los archivos modificados en tu directorio de trabajo. Por ejemplo:
+# Agregar un archivo específico
+git add nombre-del-archivo
+
+# Agregar todos los archivos modificados en el directorio de trabajo
+git add .
+
+Revisar los cambios en el área de preparación: Puedes usar el comando git status para verificar qué archivos están en el área de preparación y cuáles no. Esto te permite confirmar que has agregado los cambios correctos.
+git status
+
+Realizar el commit: Una vez que hayas agregado los archivos que deseas incluir en el commit, puedes realizar el commit utilizando el comando git commit. Este comando abrirá un editor de texto (generalmente Vim o Nano) donde puedes escribir un mensaje descriptivo para el commit. Si prefieres evitar el editor de texto, puedes usar la opción -m para agregar un mensaje directamente desde la línea de comandos.
+# Abrir el editor de texto para escribir un mensaje descriptivo
+git commit
+
+# O, agregar un mensaje directamente desde la línea de comandos
+git commit -m "Mensaje descriptivo del commit"
+
+Confirmar el commit: Una vez que hayas escrito el mensaje del commit y guardado el archivo, el commit se realizará y se aplicarán los cambios.Git también te permite combinar los pasos 2 y 3 utilizando el comando git commit -a, que agrega automáticamente todos los archivos modificados al área de preparación y realiza el commit.
+git commit -a -m "Mensaje descriptivo del commit"
+
+se utiliza para enviar (o "empujar") los cambios de la rama local llamada "antonio" al repositorio remoto llamado "origin". Aquí tienes una explicación detallada de cada parte del comando:
+git push origin antonio
+
+
